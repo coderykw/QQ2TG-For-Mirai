@@ -264,17 +264,17 @@ switch ($data['message']['chat']['type'])
         {
             $friends = [];
 
-            foreach (json_decode(file_get_contents(CONFIG['coolq']['http_url'] . '/_get_friend_list'),true)['data'] as $item)
+            foreach (json_decode(file_get_contents(CONFIG['coolq']['http_url'] . '/get_friend_list'),true)['data'] as $item)
             {
-                foreach ($item['friends'] as $key => $value)
-                {
+                //foreach ($item['friends'] as $key => $value)
+                //{
                     $friends[] = [
-                        'text' => $value['remark'],
-                        'callback_data' => json_encode(['type'=>'new_chat','user_id'=>$value['user_id']]),
+                        'text' => $item['remark'],
+                        'callback_data' => json_encode(['type'=>'new_chat','user_id'=>$item['user_id']]),
                     ];
 
                     //$friends[$value['user_id']] = $value['remark'];
-                }
+                //}
             }
 
             Method::curl("https://api.telegram.org/bot" . CONFIG['bot']['message'] . "/sendMessage?chat_id=" . CONFIG['admin']['chat_id'] . "&reply_to_message_id={$data['message']['message_id']}&text=" . urlencode('🙋好友列表') . "&reply_markup=" . json_encode([

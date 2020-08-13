@@ -60,7 +60,7 @@ class Method
      */
     public static function request_name($user_id)
     {
-        $friends_list = json_decode(file_get_contents(CONFIG['coolq']['http_url'] . '/_get_friend_list'),true)['data'];
+        $friends_list = json_decode(file_get_contents(CONFIG['coolq']['http_url'] . '/get_friend_list'),true)['data'];
 
         foreach ($friends_list as $item)
         {
