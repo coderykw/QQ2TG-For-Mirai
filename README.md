@@ -61,7 +61,7 @@ debug: false
       # 反向Websocket主机
       reverseHost: 127.0.0.1
       # 反向Websocket端口
-      reversePort: 5901
+      reversePort: 9501
       accessToken: ""
       reversePath: /
       useUniversal: true
