@@ -13,7 +13,7 @@
 
 ## 简述
 
-程序主体使用`PHP`编写, 依赖于拓展`swoole`, 配合 Mirai-console 的[cqhttp-mirai](https://github.com/richardchien/coolq-http-api)插件使用
+程序主体使用`PHP`编写, 依赖于拓展`swoole`, 配合 Mirai-console 的[cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai)插件使用
 
 目前还不是十分完善, 可能存在各种奇怪的问题, 还请各位 dalao 指点一二
 
@@ -38,7 +38,7 @@
 
 1. 将代码拖到本地 :  ```git clone https://github.com/hans362/QQ2TG.git```
 2. 将`config\.env.example`复制一份，并将复制的一份改名为`config\.env`，然后根据提示及示例填写完整
-3. 安装 Mirai-console 以及[cqhttp-mirai](https://github.com/richardchien/coolq-http-api)插件，并对插件添加配置以下参数:
+3. 安装 Mirai-console 以及[cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai)插件，并对插件添加配置以下参数:
 ```yml
 # Debug日志输出选项
 debug: false
