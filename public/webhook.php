@@ -269,7 +269,7 @@ switch ($data['message']['chat']['type'])
                 //foreach ($item['friends'] as $key => $value)
                 //{
                     $friends[] = [
-                        'text' => $item['remark'],
+                        'text' => $item['nickname'],
                         'callback_data' => json_encode(['type'=>'new_chat','user_id'=>$item['user_id']]),
                     ];
 
