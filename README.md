@@ -36,8 +36,8 @@
 
 ## 使用
 
-1. 将代码拖到本地 :  ```git clone https://github.com/hans362/QQ2TG.git```
-2. 将`config\.env.example`复制一份，并将复制的一份改名为`config\.env`，然后根据提示及示例填写完整
+1. 将代码拖到本地:  ```git clone https://github.com/hans362/QQ2TG.git```
+2. 根据提示及示例填写完整`config\.env.example`，然后将其复制一份，并将复制的一份改名为`config\.env`
 3. 安装 Mirai-console 以及[cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai)插件，并对插件添加配置以下参数:
 ```yml
 # Debug日志输出选项
