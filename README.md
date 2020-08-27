@@ -71,8 +71,8 @@ debug: false
 5. 确保您的PHP已安装了`swoole`扩展
 6. 进入目录, 输入```composer update```
 7. 在网站环境中设置 `public/` 为运行目录并确保其中的 `images` 目录可写
-8. 访问 `https://api.telegram.org/bot<bot_token>/setWebHook?url=https://<Your_URL>/webhook.php` 设置WebHook, 若认为不安全, 可自行改变文件名
-9. 配置进程守护程序(**强烈建议**):
+8. 访问 `https://api.telegram.org/bot<bot_token>/setWebHook?url=https://<Your_URL>/webhook.php` 设置WebHook, 若认为不安全, 可自行改变文件名（注意：Telegram WebHook 需要 HTTPS 协议，请解析好域名并部署好证书）
+9. 配置进程守护程序:
 ```ini
 # /usr/lib/systemd/system/QQ2TG.service
 [Unit]
