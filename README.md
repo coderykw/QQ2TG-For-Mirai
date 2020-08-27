@@ -34,6 +34,12 @@
 
 实在编不出来了...  /滑稽
 
+## 环境要求
+
+- 适用于 PHP 7.0 及以上版本
+- 需要 MySQL 数据库
+- 需要 HTTPS 支持
+
 ## 使用
 
 1. 将代码拖到本地:  ```git clone https://github.com/hans362/QQ2TG.git```
