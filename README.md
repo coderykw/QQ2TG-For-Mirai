@@ -36,7 +36,7 @@
 
 ## 环境要求
 
-- 适用于 PHP 7.0 及以上版本
+- 适用于 PHP **7.2**（感谢 [@ojhdt](https://github.com/ojhdt) 帮助测试）
 - 需要 MySQL 数据库
 - 需要 HTTPS 支持
 
@@ -100,7 +100,7 @@ WantedBy=multi-user.target
     3. 回复机器人发出的消息开始私聊
 
 - Web 消息查看:
-    1. 在 Config.php 中设置好 `program -> password`
+    1. 在 `config\.env.example` 中设置好 `program -> password` 权限密钥
     2. 打开 `http(s)://<Your URL>/admin/message.html` 并将权限密钥填写完整
     3. enjoy it
 
