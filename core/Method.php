@@ -64,13 +64,13 @@ class Method
 
         foreach ($friends_list as $item)
         {
-            foreach ($item['friends'] as $value)
-            {
-                if ($value['user_id'] == $user_id)
+            //foreach ($item['friends'] as $value)
+            //{
+                if ($item['user_id'] == $user_id)
                 {
-                    return $value['remark'];
+                    return $item['nickname'];
                 }
-            }
+            //}
         }
         return json_decode(file_get_contents(CONFIG['coolq']['http_url'] . '/get_stranger_info?user_id=' . $user_id),true)['data']['nickname'];
     }
