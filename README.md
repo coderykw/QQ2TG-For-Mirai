@@ -13,7 +13,7 @@
 
 ## 简述
 
-程序主体使用`PHP`编写, 依赖于拓展`swoole`, 配合 Mirai-console 的[cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai)插件使用
+程序主体使用`PHP`编写, 依赖于拓展`swoole`, 配合 Mirai-console 的 [cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai) 插件使用
 
 目前还不是十分完善, 可能存在各种奇怪的问题, 还请各位 dalao 指点一二
 
@@ -44,7 +44,7 @@
 
 1. 将代码拖到本地:  ```git clone https://github.com/hans362/QQ2TG.git```
 2. 根据提示及示例填写完整`config\.env`，**不要改动**`config\.env.example`
-3. 安装 Mirai-console 以及[cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai)插件，并对插件添加配置以下参数:
+3. 安装 Mirai-console 以及 [cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai) 插件，并对插件添加配置以下参数:
 ```yml
 # Debug日志输出选项
 debug: false
@@ -73,11 +73,11 @@ debug: false
       useUniversal: true
       reconnectInterval: 3000
 ```
-4. 确保您本地可访问 Telegram Bot API 服务器或填写好了`proxy -> host/port`(若不需要请留空)
+4. 确保您本地可访问 Telegram Bot API 服务器或在`config\.env`中填写好了`proxy -> host/port`(若不需要请留空)
 5. 确保您的PHP已安装了`swoole`扩展
 6. 进入目录, 输入```composer update```
-7. 在网站环境中设置 `public/` 为运行目录并确保其中的 `images` 目录可写
-8. 访问 `https://api.telegram.org/bot<bot_token>/setWebHook?url=https://<Your_URL>/webhook.php` 设置WebHook, 若认为不安全, 可自行改变文件名（注意：Telegram WebHook 需要 HTTPS 协议，请解析好域名并部署好证书）
+7. 在网站环境中设置`public/`为运行目录并确保其中的`images`目录可写
+8. 访问`https://api.telegram.org/bot<bot_token>/setWebHook?url=https://<Your_URL>/webhook.php`设置WebHook, 若认为不安全, 可自行改变文件名（注意：Telegram WebHook 需要 HTTPS 协议，请解析好域名并部署好证书）
 9. 配置进程守护程序:
 ```ini
 # /usr/lib/systemd/system/QQ2TG.service
@@ -100,7 +100,7 @@ WantedBy=multi-user.target
     3. 回复机器人发出的消息开始私聊
 
 - Web 消息查看:
-    1. 在 `config\.env.example` 中设置好 `program -> password` 权限密钥
+    1. 在 `config\.env` 中设置好 `program -> password` 权限密钥
     2. 打开 `http(s)://<Your URL>/admin/message.html` 并将权限密钥填写完整
     3. enjoy it
 
