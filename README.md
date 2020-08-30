@@ -42,6 +42,8 @@
 
 ## 使用
 
+> 关于该项目更为详细的使用说明，可以参考 https://blog.ojhdt.com/20200829/qq2tg/
+
 1. 将代码拖到本地:  ```git clone https://github.com/hans362/QQ2TG.git```
 2. 根据提示及示例填写完整`config\.env`，**不要改动**`config\.env.example`
 3. 安装 Mirai-console 以及 [cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai) 插件，并对插件添加配置以下参数:
