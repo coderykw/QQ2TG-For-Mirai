@@ -105,7 +105,7 @@ class Group
                 'api' => 'sendMessage',
                 'data' => [
                     'chat_id' => CONFIG['group'][$data['group_id']],
-                    'text' => $data['message'],
+                    'text' => str_replace("\r","\n",$data['message']),
                     'parse_mode' => 'HTML',
                     'disable_web_page_preview' => false,
                 ],
@@ -127,13 +127,13 @@ class Group
              * 纯文本
              */
             case 'sendMessage':
-                $url = $host . 'sendMessage?chat_id=' . $data['data']['chat_id'] . '&text=' . urlencode($data['data']['text']) . '&parse_mode=HTML&disable_web_page_preview=false';
+                $url = $host . 'sendMessage?chat_id=' . $data['data']['chat_id'] . '&text=' . urlencode(str_replace("\r","\n",$data['data']['text'])) . '&parse_mode=HTML&disable_web_page_preview=false';
                 break;
             /**
              * 单张图片
              */
             case 'sendPhoto':
-                $url = $host . 'sendPhoto?chat_id=' . $data['data']['chat_id'] . '&photo=' . urlencode($data['data']['media']['media']) . '&parse_mode=HTML&caption=' . urlencode($data['data']['media']['caption']);
+                $url = $host . 'sendPhoto?chat_id=' . $data['data']['chat_id'] . '&photo=' . urlencode($data['data']['media']['media']) . '&parse_mode=HTML&caption=' . urlencode(str_replace("\r","\n",$data['data']['media']['caption']));
                 break;
             /**
              * 多张图片
